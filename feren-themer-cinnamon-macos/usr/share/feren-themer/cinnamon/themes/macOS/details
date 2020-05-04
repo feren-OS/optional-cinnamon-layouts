@@ -1,0 +1,18 @@
+[THEMER THEME]
+Name=macOS
+Applets=['panel1:left:0:CinnVIIStarkMenu@NikoKrause:1', 'panel1:right:0:keyboard@cinnamon.org:3', 'panel1:right:1:user@cinnamon.org:4', 'panel1:right:2:systray@cinnamon.org:9', 'panel1:right:3:xapp-status@cinnamon.org:10', 'panel1:right:4:printers@cinnamon.org:6', 'panel1:right:5:network@cinnamon.org:11', 'panel1:right:6:power@cinnamon.org:12', 'panel1:right:7:sound@cinnamon.org:13', 'panel1:right:8:calendar@cinnamon.org:128', 'panel1:right:9:notifications@cinnamon.org:7']
+Extensions=[]
+Conky=False
+GTKTheme=McOS Mint
+WMTheme=McOS Mint
+WMFont=Lato Light 11
+ShellTheme=macOS
+CursorTheme=DMZ-White
+Icons=MacBuntu-OS
+LogoColour=Black
+WMLayout=close,minimize,maximize:
+Panels=['1:0:top']
+PanelSizes=['1:26', '2:26']
+PanelIconSizes='[{"panelId": 1, "left": 16, "center": 16, "right": 16}]'
+Dock=True
+FilesStyle=mac

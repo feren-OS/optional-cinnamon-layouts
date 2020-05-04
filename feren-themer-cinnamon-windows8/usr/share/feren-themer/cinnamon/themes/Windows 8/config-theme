@@ -1,0 +1,117 @@
+#!/bin/bash
+
+# Extra commands to be run during the applying of this theme go here
+
+opt1="Blue (Default)"
+opt2="SilverChalice"
+opt3="Anakiwa"
+opt4="Illusion"
+opt5="Saffron"
+opt6="Conifer"
+opt7="Bermuda"
+opt8="SandyBrown"
+opt9="Bittersweet"
+opt10="BrilliantRose"
+opt11="Emerald"
+opt12="Heliotrope"
+opt13="Malibu"
+opt14="Melrose"
+opt15="BisonHide"
+opt16="Alabaster"
+int=$(zenity --title "Accent Colour" --height 380 --list --radiolist --text 'Select your Preferred Accent Colour:' --column '' --column 'Colour' TRUE "$opt1" FALSE "$opt2" FALSE "$opt3" FALSE "$opt4" FALSE "$opt5" FALSE "$opt6" FALSE "$opt7" FALSE "$opt8" FALSE "$opt9" FALSE "$opt10" FALSE "$opt11" FALSE "$opt12" FALSE "$opt13" FALSE "$opt14" FALSE "$opt15" FALSE "$opt16")
+if [ ! "$int" = "Blue (Default)" ] && [ ! -z "$int" ]; then
+    gsettings set org.cinnamon.desktop.wm.preferences theme "Win8-$int"
+else
+    gsettings set org.cinnamon.desktop.wm.preferences theme "Windows8"
+    gsettings set org.cinnamon.theme name "Railway"
+fi
+if [ "$int" = "SilverChalice" ]; then
+    if [ ! -d /home/$(whoami)/.themes/RailwaySilverchalice ]; then
+	    bash '/usr/share/feren-theme-colouriser/cinnamon/Windows 8/colour.sh' --colour=A0A0A0 --name=RailwaySilverchalice --location=/home/$(whoami)/.themes
+    fi
+    gsettings set org.cinnamon.theme name "RailwaySilverchalice"
+fi
+if [ "$int" = "Anakiwa" ]; then
+    if [ ! -d /home/$(whoami)/.themes/RailwayAnakiwa ]; then
+	    bash '/usr/share/feren-theme-colouriser/cinnamon/Windows 8/colour.sh' --colour=8DC8FB --name=RailwayAnakiwa --location=/home/$(whoami)/.themes
+    fi
+    gsettings set org.cinnamon.theme name "RailwayAnakiwa"
+fi
+if [ "$int" = "Illusion" ]; then
+    if [ ! -d /home/$(whoami)/.themes/RailwayIllusion ]; then
+	    bash '/usr/share/feren-theme-colouriser/cinnamon/Windows 8/colour.sh' --colour=EF81CB --name=RailwayIllusion --location=/home/$(whoami)/.themes
+    fi
+    gsettings set org.cinnamon.theme name "RailwayIllusion"
+fi
+if [ "$int" = "Saffron" ]; then
+    if [ ! -d /home/$(whoami)/.themes/RailwaySaffron ]; then
+	    bash '/usr/share/feren-theme-colouriser/cinnamon/Windows 8/colour.sh' --colour=EDC518 --name=RailwaySaffron --location=/home/$(whoami)/.themes
+    fi
+    gsettings set org.cinnamon.theme name "RailwaySaffron"
+fi
+if [ "$int" = "Conifer" ]; then
+    if [ ! -d /home/$(whoami)/.themes/RailwayConifer ]; then
+	    bash '/usr/share/feren-theme-colouriser/cinnamon/Windows 8/colour.sh' --colour=9ACD3D --name=RailwayConifer --location=/home/$(whoami)/.themes
+    fi
+    gsettings set org.cinnamon.theme name "RailwayConifer"
+fi
+if [ "$int" = "Bermuda" ]; then
+    if [ ! -d /home/$(whoami)/.themes/RailwayBermuda ]; then
+	    bash '/usr/share/feren-theme-colouriser/cinnamon/Windows 8/colour.sh' --colour=5CCECE --name=RailwayBermuda --location=/home/$(whoami)/.themes
+    fi
+    gsettings set org.cinnamon.theme name "RailwayBermuda"
+fi
+if [ "$int" = "SandyBrown" ]; then
+    if [ ! -d /home/$(whoami)/.themes/RailwaySandybrown ]; then
+	    bash '/usr/share/feren-theme-colouriser/cinnamon/Windows 8/colour.sh' --colour=FB9F32 --name=RailwaySandybrown --location=/home/$(whoami)/.themes
+    fi
+    gsettings set org.cinnamon.theme name "RailwaySandybrown"
+fi
+if [ "$int" = "Bittersweet" ]; then
+    if [ ! -d /home/$(whoami)/.themes/RailwayBittersweet ]; then
+	    bash '/usr/share/feren-theme-colouriser/cinnamon/Windows 8/colour.sh' --colour=FB5151 --name=RailwayBittersweet --location=/home/$(whoami)/.themes
+    fi
+    gsettings set org.cinnamon.theme name "RailwayBittersweet"
+fi
+if [ "$int" = "BrilliantRose" ]; then
+    if [ ! -d /home/$(whoami)/.themes/RailwayBrilliantrose ]; then
+	    bash '/usr/share/feren-theme-colouriser/cinnamon/Windows 8/colour.sh' --colour=FB65B0 --name=RailwayBrilliantrose --location=/home/$(whoami)/.themes
+    fi
+    gsettings set org.cinnamon.theme name "RailwayBrilliantrose"
+fi
+if [ "$int" = "Emerald" ]; then
+    if [ ! -d /home/$(whoami)/.themes/RailwayEmerald ]; then
+	    bash '/usr/share/feren-theme-colouriser/cinnamon/Windows 8/colour.sh' --colour=21C256 --name=RailwayEmerald --location=/home/$(whoami)/.themes
+    fi
+    gsettings set org.cinnamon.theme name "RailwayEmerald"
+fi
+if [ "$int" = "Heliotrope" ]; then
+    if [ ! -d /home/$(whoami)/.themes/RailwayHeliotrope ]; then
+	    bash '/usr/share/feren-theme-colouriser/cinnamon/Windows 8/colour.sh' --colour=C37CFB --name=RailwayHeliotrope --location=/home/$(whoami)/.themes
+    fi
+    gsettings set org.cinnamon.theme name "RailwayHeliotrope"
+fi
+if [ "$int" = "Malibu" ]; then
+    if [ ! -d /home/$(whoami)/.themes/RailwayMalibu ]; then
+	    bash '/usr/share/feren-theme-colouriser/cinnamon/Windows 8/colour.sh' --colour=63B4FB --name=RailwayMalibu --location=/home/$(whoami)/.themes
+    fi
+    gsettings set org.cinnamon.theme name "RailwayMalibu"
+fi
+if [ "$int" = "Melrose" ]; then
+    if [ ! -d /home/$(whoami)/.themes/RailwayMelrose ]; then
+	    bash '/usr/share/feren-theme-colouriser/cinnamon/Windows 8/colour.sh' --colour=9498FB --name=RailwayMelrose --location=/home/$(whoami)/.themes
+    fi
+    gsettings set org.cinnamon.theme name "RailwayMelrose"
+fi
+if [ "$int" = "BisonHide" ]; then
+    if [ ! -d /home/$(whoami)/.themes/RailwayBisonhide ]; then
+	    bash '/usr/share/feren-theme-colouriser/cinnamon/Windows 8/colour.sh' --colour=B5A494 --name=RailwayBisonhide --location=/home/$(whoami)/.themes
+    fi
+    gsettings set org.cinnamon.theme name "RailwayBisonhide"
+fi
+if [ "$int" = "Alabaster" ]; then
+    if [ ! -d /home/$(whoami)/.themes/RailwayAlabaster ]; then
+	    bash '/usr/share/feren-theme-colouriser/cinnamon/Windows 8/colour.sh' --colour=A0A0A0 --name=RailwayAlabaster --location=/home/$(whoami)/.themes
+    fi
+    gsettings set org.cinnamon.theme name "RailwayAlabaster"
+fi

@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# Extra commands to be run during the applying of this theme go here
+
+opt1="Light (Default)"
+opt2="Dark"
+opt3="Half-Dark ('Darker')"
+int=$(zenity --title "Theme Style" --height 380 --list --radiolist --text 'Select your Preferred Theme Style:' --column '' --column 'Style' TRUE "$opt1" FALSE "$opt2" FALSE "$opt3")
+if [ "$int" = "Light (Default)" ] || [ -z "$int" ]; then
+    gsettings set org.cinnamon.desktop.wm.preferences theme 'Mint-Y'
+    theme="Mint-Y"
+fi
+if [ "$int" = "Dark" ]; then
+    gsettings set org.cinnamon.desktop.wm.preferences theme 'Mint-Y-Dark'
+    theme="Mint-Y-Dark"
+fi
+if [ "$int" = "Half-Dark ('Darker')" ]; then
+    gsettings set org.cinnamon.desktop.wm.preferences theme 'Mint-Y-Dark'
+    theme="Mint-Y-Darker"
+fi
+if [ -d /usr/share/icons/Mint-Y-Teal ] && [ -d /usr/share/themes/Mint-Y-Teal ]; then
+    opt1="Green (Default)"
+    opt2="Aqua"
+    opt3="Blue"
+    opt4="Brown"
+    opt5="Grey"
+    opt6="Orange"
+    opt7="Pink"
+    opt8="Purple"
+    opt9="Red"
+    opt10="Sand"
+    opt11="Teal"
+    int2=$(zenity --title "Theme Style" --height 420 --list --radiolist --text 'Select your Preferred Theme Colour:' --column '' --column 'Style' TRUE "$opt1" FALSE "$opt2" FALSE "$opt3" FALSE "$opt4" FALSE "$opt5" FALSE "$opt6" FALSE "$opt7" FALSE "$opt8" FALSE "$opt9" FALSE "$opt10" FALSE "$opt11")
+fi
+if [ "$int2" = "Green (Default)" ] || [ -z "$int2" ]; then
+    colour=""
+else
+    colour="-$int2"
+fi
+gsettings set org.cinnamon.desktop.interface icon-theme "$(echo $theme$colour | sed 's/-Darker//g' | sed 's/-Dark//g')"
+gsettings set org.cinnamon.desktop.interface gtk-theme "$theme$colour"
+gsettings set org.cinnamon.theme name "$(echo $theme$colour | sed 's/-Darker//g')"

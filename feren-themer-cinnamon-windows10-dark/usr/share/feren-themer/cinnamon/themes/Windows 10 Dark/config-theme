@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Extra commands to be run during the applying of this theme go here
+
+opt1="No Colour"
+opt2="Blue"
+opt3="Cyan"
+opt4="Dark Orange"
+opt5="Dark Pink"
+opt6="Dark Red"
+opt7="Faded Green"
+opt8="Flat Blue"
+opt9="Gray"
+opt10="Light Green"
+opt11="Lime"
+opt12="Navy Blue"
+opt13="Orange"
+opt14="Plum"
+opt15="Purple"
+opt16="Sky Blue"
+opt17="Yellow"
+int=$(zenity --title "Accent Colour" --height 380 --list --radiolist --text 'Select your Preferred Accent Colour:' --column '' --column 'Colour' TRUE "$opt1" FALSE "$opt2" FALSE "$opt3" FALSE "$opt4" FALSE "$opt5" FALSE "$opt6" FALSE "$opt7" FALSE "$opt8" FALSE "$opt9" FALSE "$opt10" FALSE "$opt11" FALSE "$opt12" FALSE "$opt13" FALSE "$opt14" FALSE "$opt15" FALSE "$opt16" FALSE "$opt17")
+if [ ! "$int" = "No Colour" ] && [ ! -z "$int" ]; then
+    gsettings set org.cinnamon.desktop.wm.preferences theme "Windows 10 $int"
+else
+    gsettings set org.cinnamon.desktop.wm.preferences theme "Windows 10 Dark"
+fi

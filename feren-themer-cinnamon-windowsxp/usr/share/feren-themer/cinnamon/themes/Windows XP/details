@@ -1,0 +1,15 @@
+[THEMER THEME]
+Name=Windows XP
+Applets=['panel1:left:0:CinnVIIStarkMenu@NikoKrause:1', 'panel1:left:1:panel-launchers@cinnamon.org:360', 'panel1:left:2:show-desktop@cinnamon.org:256', 'panel1:left:3:window-list@cinnamon.org:2', 'panel1:right:0:keyboard@cinnamon.org:3', 'panel1:right:1:user@cinnamon.org:4', 'panel1:right:2:inhibit@cinnamon.org:5', 'panel1:right:3:printers@cinnamon.org:6', 'panel1:right:4:notifications@cinnamon.org:7', 'panel1:right:5:show-hide-applets@mohammad-sn:8', 'panel1:right:6:systray@cinnamon.org:9', 'panel1:right:7:xapp-status@cinnamon.org:10', 'panel1:right:8:network@cinnamon.org:11', 'panel1:right:9:power@cinnamon.org:12', 'panel1:right:10:sound@cinnamon.org:13', 'panel1:right:11:calendar@cinnamon.org:128']
+Extensions=[]
+Conky=False
+WMFont=Lato Light 11
+CursorTheme=DMZ-White
+Icons=LinXP
+LogoColour=White
+WMLayout=menu:minimize,maximize,close
+Panels=['1:0:bottom']
+PanelSizes=['1:30', '2:30']
+PanelIconSizes='[{"panelId": 1, "left": 22, "center": 16, "right": 16}]'
+Dock=False
+FilesStyle=Classic

@@ -1,0 +1,47 @@
+#!/bin/bash
+
+# Extra commands to be run during the applying of this theme go here
+
+opt1="Default (Blue)"
+opt2="Olive Green"
+opt3="Silver"
+opt4="Zune Style"
+opt5="Embedded Style"
+opt6="Media Center Style (Royale)"
+opt7="Media Center Style (Royale) Noir"
+int=$(zenity --title "Window Colour" --height 380 --list --radiolist --text 'Select your Preferred Windows and buttons Color scheme:' --column '' --column 'Colour' TRUE "$opt1" FALSE "$opt2" FALSE "$opt3" FALSE "$opt4" FALSE "$opt5" FALSE "$opt6" FALSE "$opt7")
+if [ "$int" = "Default (Blue)" ] || [ -z "$int" ]; then
+    gsettings set org.cinnamon.desktop.wm.preferences theme 'CinnXP'
+    gsettings set org.cinnamon.desktop.interface gtk-theme 'CinnXP'
+    gsettings set org.cinnamon.theme name 'CinnXP'
+fi
+if [ "$int" = "Olive Green" ]; then
+    gsettings set org.cinnamon.desktop.wm.preferences theme 'CinnXP-Homestead'
+    gsettings set org.cinnamon.desktop.interface gtk-theme 'CinnXP-Homestead'
+    gsettings set org.cinnamon.theme name 'CinnXP-Homestead'
+fi
+if [ "$int" = "Silver" ]; then
+    gsettings set org.cinnamon.desktop.wm.preferences theme 'CinnXP-Metallic'
+    gsettings set org.cinnamon.desktop.interface gtk-theme 'CinnXP-Metallic'
+    gsettings set org.cinnamon.theme name 'CinnXP-Metallic'
+fi
+if [ "$int" = "Zune Style" ]; then
+    gsettings set org.cinnamon.desktop.wm.preferences theme 'CinnXP-Zune'
+    gsettings set org.cinnamon.desktop.interface gtk-theme 'CinnXP-Zune'
+    gsettings set org.cinnamon.theme name 'CinnXP-Zune'
+fi
+if [ "$int" = "Embedded Style" ]; then
+    gsettings set org.cinnamon.desktop.wm.preferences theme 'CinnXP-Embedded'
+    gsettings set org.cinnamon.desktop.interface gtk-theme 'CinnXP-Embedded'
+    gsettings set org.cinnamon.theme name 'CinnXP-Embedded'
+fi
+if [ "$int" = "Media Center Style (Royale)" ]; then
+    gsettings set org.cinnamon.desktop.wm.preferences theme 'CinnXP-Royale'
+    gsettings set org.cinnamon.desktop.interface gtk-theme 'CinnXP-Royale'
+    gsettings set org.cinnamon.theme name 'CinnXP-Royale'
+fi
+if [ "$int" = "Media Center Style (Royale) Noir" ]; then
+    gsettings set org.cinnamon.desktop.wm.preferences theme 'CinnXP-Noir'
+    gsettings set org.cinnamon.desktop.interface gtk-theme 'CinnXP-Noir'
+    gsettings set org.cinnamon.theme name 'CinnXP-Noir'
+fi

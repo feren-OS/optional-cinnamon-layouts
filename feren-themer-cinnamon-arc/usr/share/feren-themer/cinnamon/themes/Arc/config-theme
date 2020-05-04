@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Extra commands to be run during the applying of this theme go here
+
+opt1="Light (Default)"
+opt2="Dark"
+opt3="Half-Dark (Darker)"
+int=$(zenity --title "Theme Style" --height 380 --list --radiolist --text 'Select your Preferred Theme Style:' --column '' --column 'Style' TRUE "$opt1" FALSE "$opt2" FALSE "$opt3")
+if [ "$int" = "Light (Default)" ] || [ -z "$int" ]; then
+    gsettings set org.cinnamon.desktop.wm.preferences theme 'Arc'
+    gsettings set org.cinnamon.desktop.interface gtk-theme 'Arc'
+    gsettings set org.cinnamon.theme name 'Arc'
+fi
+if [ "$int" = "Dark" ]; then
+    gsettings set org.cinnamon.desktop.wm.preferences theme 'Arc-Dark'
+    gsettings set org.cinnamon.desktop.interface gtk-theme 'Arc-Dark'
+    gsettings set org.cinnamon.theme name 'Arc-Dark'
+fi
+if [ "$int" = "Half-Dark (Darker)" ]; then
+    gsettings set org.cinnamon.desktop.wm.preferences theme 'Arc-Dark'
+    gsettings set org.cinnamon.desktop.interface gtk-theme 'Arc-Darker'
+    gsettings set org.cinnamon.theme name 'Arc'
+fi

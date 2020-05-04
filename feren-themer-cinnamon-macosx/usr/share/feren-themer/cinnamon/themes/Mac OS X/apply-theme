@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Extra commands to be run during the applying of this theme go here
+
+gconftool-2 --type String --set /apps/docky-2/Docky/Interface/DockPreferences/Dock1/Position Bottom
+gconftool-2 --type Boolean --set /apps/docky-2/Docky/Interface/DockPreferences/Dock1/ThreeDimensional True
+gconftool-2 --type String --set /apps/docky-2/Docky/Services/ThemeService/Theme MBuntu-Y-Buyi-idock
+gconftool-2 --type String --set /apps/docky-2/Docky/Interface/DockPreferences/Dock1/Autohide None
+gconftool-2 --type Boolean --set /apps/docky-2/Docky/Interface/DockPreferences/Dock1/PanelMode False
+gconftool-2 --type Boolean --set /apps/docky-2/Docky/Interface/DockPreferences/Dock1/WindowManager True
+gconftool-2 --type Boolean --set /apps/docky-2/Docky/Interface/DockPreferences/Dock1/ZoomEnabled True
+gconftool-2 --type String --set /apps/docky-2/Docky/Interface/DockPreferences/Dock1/ZoomPercent 1.3100000000000000
+gconftool-2 --type Boolean --set /apps/docky-2/Docky/Items/DockyItem/ShowDockyItem False

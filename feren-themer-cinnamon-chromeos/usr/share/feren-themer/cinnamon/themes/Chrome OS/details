@@ -1,0 +1,18 @@
+[THEMER THEME]
+Name=Chrome OS
+Applets=['panel1:left:1:grouped-window-list@cinnamon.org:44', 'panel1:left:0:CinnVIIStarkMenu@NikoKrause:35', 'panel1:right:0:keyboard@cinnamon.org:3', 'panel1:right:1:printers@cinnamon.org:6', 'panel1:right:2:systray@cinnamon.org:9', 'panel1:right:3:xapp-status@cinnamon.org:10', 'panel1:right:4:network@cinnamon.org:11', 'panel1:right:5:power@cinnamon.org:12', 'panel1:right:6:sound@cinnamon.org:13', 'panel1:right:7:notifications@cinnamon.org:7', 'panel1:right:8:calendar@cinnamon.org:128', 'panel1:right:9:user@cinnamon.org:4']
+Extensions=['transparent-panels@germanfr']
+Conky=False
+GTKTheme=Chrome OS
+WMTheme=Chrome OS
+WMFont=Lato Light 11
+ShellTheme=Chrome OS
+CursorTheme=DMZ-White
+Icons=Paper
+LogoColour=None
+WMLayout=:minimize,maximize,close
+Panels=['1:0:bottom']
+PanelSizes=['1:44', '2:44']
+PanelIconSizes='[{"panelId": 1, "left": 0, "center": 16, "right": 16}]'
+Dock=False
+FilesStyle=ChromeOS

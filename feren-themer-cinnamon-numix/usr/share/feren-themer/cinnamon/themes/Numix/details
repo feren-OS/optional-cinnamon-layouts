@@ -1,0 +1,18 @@
+[THEMER THEME]
+Name=Numix
+Applets=
+Extensions=[]
+Conky=True
+GTKTheme=Numix
+WMTheme=Numix
+WMFont=Lato Light 11
+ShellTheme=Numix-Cinnamon
+CursorTheme=DMZ-White
+Icons=Numix-Circle
+LogoColour=Light
+WMLayout=:minimize,maximize,close
+Panels=['1:0:bottom']
+PanelSizes=['1:30', '2:30']
+PanelIconSizes='[{"panelId": 1, "left": 16, "center": 16, "right": 16}]'
+Dock=False
+FilesStyle=ferenOS

@@ -1,0 +1,15 @@
+[THEMER THEME]
+Name=Arc
+Applets=
+Extensions=[]
+Conky=True
+WMFont=Lato Light 11
+CursorTheme=DMZ-White
+Icons=Arc
+LogoColour=Light
+WMLayout=menu:minimize,maximize,close
+Panels=['1:0:top']
+PanelSizes=['1:28', '2:28']
+PanelIconSizes='[{"panelId": 1, "left": 0, "center": 22, "right": 22}]'
+Dock=False
+FilesStyle=ferenOS
